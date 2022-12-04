@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 
 namespace BDCarrito.Entidades
 {
-    public class Usuario : BaseEntity
+    public class Usuario
     {
+
         [Key]
         public int DNI { get; set; }
 

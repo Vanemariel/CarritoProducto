@@ -27,12 +27,13 @@ namespace Carrito.Server.Controllers
 
             List<ProductoDto> ListUserMapper = new List<ProductoDto> { };
 
-            productos.ForEach(productos =>
+            productos.ForEach(producto =>
             {
                 ListUserMapper.Add(new ProductoDto
                 {
-                    Nombre = productos.Nombre,
-                    Precio = productos.Precio
+                    Nombre = producto.Nombre,
+                    Precio = producto.Precio,
+                    CarritoId = producto.CarritoId
                 });
             });
             return Ok(ListUserMapper);
@@ -94,7 +95,7 @@ namespace Carrito.Server.Controllers
 
                 if (prod == null)
                 {
-                    throw new Exception(("No existe el Producto con id igual a {id}.");
+                    throw new Exception("No existe el Producto con id igual a {id}.");
                 }
                 context.TablaProductos.Remove(prod);
                 await context.SaveChangesAsync();

@@ -29,10 +29,9 @@ namespace Carrito.Server.Controllers
             {
                 ListUserMapper.Add(new UsuarioDto
                 {
-                    Id = Usuario.Id,
                     DNI = Usuario.DNI,
-                    Vip = Usuario.Vip
-                    
+                    Vip = Usuario.Vip,
+                    Nombre = Usuario.Nombre
                 });
             });
             return Ok(ListUserMapper);

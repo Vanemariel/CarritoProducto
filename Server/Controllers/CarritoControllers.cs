@@ -59,7 +59,9 @@ namespace Carrito.Server.Controllers
                     throw new Exception("No es correcto");
                 }
 
-                BDCarrito.Entidades.Carrito Carro = await context.TablaCarrito.Where(x => x.Id == idCarrito).FirstOrDefaultAsync();
+                BDCarrito.Entidades.Carrito? Carro = await context.TablaCarrito
+                    .Where(x => x.Id == idCarrito)
+                    .FirstOrDefaultAsync();
 
                 if (Carro == null)
                 {

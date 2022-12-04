@@ -16,5 +16,7 @@ namespace Carrito.Shared.Modedls.DTOBack
         public float Precio { get; set; }
 
         public string Descripcion { get; set; }
+
+        public int CarritoId { get; set; }
     }
 }
