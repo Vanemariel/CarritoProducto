@@ -23,6 +23,6 @@ namespace BDCarrito.Entidades
 
 
         [InverseProperty("Usuario")]
-        public List<Carrito> Carritos { get; set; }
+        public List<Carrito> ListaCarritos { get; set; }
     }
 }

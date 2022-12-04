@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Carrito.Shared.Modedls.DTOBack
 {
-    public class CarritoDto
+    public class CarritoDto // sn uso aun
     {
         public float PrecioTotal { get; set; }
 

@@ -12,7 +12,7 @@ namespace BDCarrito.Entidades
         public int DniUsuario { get; set; }
 
         [InverseProperty("Carrito")]
-        public List<Producto> Productos { get; set; }
+        public List<Producto> ListaProductos { get; set; }
 
 
         [ForeignKey("DniUsuario")]

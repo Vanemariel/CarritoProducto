@@ -10,5 +10,6 @@ namespace Carrito.Shared.Modedls.DTOBack
     {
         public int Id { get; set; }
         public int DNI { get; set; }
+        public bool Vip { get; set; }
     }
 }

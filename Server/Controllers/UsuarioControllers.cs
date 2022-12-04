@@ -30,7 +30,9 @@ namespace Carrito.Server.Controllers
                 ListUserMapper.Add(new UsuarioDto
                 {
                     Id = Usuario.Id,
-                    DNI = Usuario.DNI
+                    DNI = Usuario.DNI,
+                    Vip = Usuario.Vip
+                    
                 });
             });
             return Ok(ListUserMapper);
@@ -38,7 +40,7 @@ namespace Carrito.Server.Controllers
 
         [HttpPost]
         //verbo es el http post, pero a la base de datos ingresa como un insert
-        public async Task<ActionResult<string>> CrearUsuario(Usuario usuario)
+        public async Task<ActionResult<string>> AddUser(Usuario usuario)
         {
             try
             {

@@ -39,7 +39,7 @@ namespace Carrito.Server.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<string>> Insert(Producto prod)
+        public async Task<ActionResult<string>> AddProducto(Producto prod)
         {
             try
             {
@@ -54,7 +54,7 @@ namespace Carrito.Server.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public async Task<ActionResult> Modified(int id, [FromBody] Producto Producto)
+        public async Task<ActionResult> UpdateProducto(int id, [FromBody] Producto Producto)
         {
            
             try
@@ -90,7 +90,7 @@ namespace Carrito.Server.Controllers
                     throw new Exception("No es correcto");
                 }
 
-                Producto prod = await context.TablaProductos.Where(x => x.Id == id).FirstOrDefaultAsync();
+                Producto? prod = await context.TablaProductos.Where(x => x.Id == id).FirstOrDefaultAsync();
 
                 if (prod == null)
                 {
