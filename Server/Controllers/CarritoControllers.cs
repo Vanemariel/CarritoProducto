@@ -20,7 +20,7 @@ namespace Carrito.Server.Controllers
 
 
 
-        [HttpPost]
+        [HttpPost("CreateCarrito")]
         public async Task<ActionResult<int>> CreateCarrito(int DNIUsuario)
         {
             try
@@ -81,7 +81,7 @@ namespace Carrito.Server.Controllers
 
 
 
-        [HttpPost]
+        [HttpPost("AddProductoToCarrito")]
         public async Task<ActionResult<DatosCarritoDTO>> AddProductoToCarrito( int idCarrito, int idProducto)
         {
             try
