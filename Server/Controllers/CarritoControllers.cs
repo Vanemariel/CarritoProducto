@@ -82,7 +82,7 @@ namespace Carrito.Server.Controllers
 
 
         [HttpPost]
-        public async Task<ActionResult<DatosCarritoDTO>> AddProductoToCarrito([FromBody] int idCarrito, [FromBody] int idProducto)
+        public async Task<ActionResult<DatosCarritoDTO>> AddProductoToCarrito( int idCarrito, int idProducto)
         {
             try
             {

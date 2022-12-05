@@ -1,6 +1,7 @@
 using BDCarrito;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,10 @@ builder.Services.AddDbContext<BDContext>(opciones =>
     opciones.UseSqlServer(conn)
 );
 
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Album", Version = "v1" });
+});
 
 var app = builder.Build();
 
