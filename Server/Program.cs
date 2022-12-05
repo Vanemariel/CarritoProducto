@@ -17,7 +17,7 @@ builder.Services.AddDbContext<BDContext>(opciones =>
 
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Album", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Carro", Version = "v1" });
 });
 
 var app = builder.Build();
