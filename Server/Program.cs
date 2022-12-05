@@ -23,7 +23,7 @@ builder.Services.AddSwaggerGen(c =>
 var app = builder.Build();
 
 app.UseSwagger();
-app.UseSwaggerUI(c => c.SwaggerEndpoint("/swager/v1/swager.json", "Carro v1"));
+app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swager.json", "Carro v1"));
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
